@@ -1,4 +1,4 @@
-# ECE1783A3
+# ReadMe
 
 How to run:
 1. place the yuv video file into the folder

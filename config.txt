@@ -1,0 +1,26 @@
+[ENCODER]
+file_name = CIF  # video file name without extension
+num_frames = 10      # number of frames to encode, 1 to 300
+width = 352         # dont change
+height = 288        # dont change
+i = 16               # block size i x i, i should be 2^n, where n >= 1
+r = 16               # search radius for MC, should be 1, 4, 8
+QP = 3              # Quantization parameter, lower means better quality, should be 0 to log2(i) + 7
+i_period = 21      # number of frame gap between two I frames
+nRefFrames = 1      # number of reference frames, should be 1 to 4
+VBSEnable = 1    # VBS mode
+const = 30       # constant for Lagrange parameter of intra frame
+const2 = 30      # constant for Lagrange parameter of inter frame
+FMEEnable = 1   # Fractional motion estimation (0 menas false)
+FastME = 1          # FastME mode (0 menas false)
+RCflag = 0      # rate control flag
+targetBR = 2000000     # target bit rate, only working when RCflag is true
+FPS = 30        # frames per second, only working when RCflag is true
+ParallelMode = 0    #ParallelMode mode
+
+[BRTABLE]
+num_frames = 21
+
+[DECODER]
+output_dir = CIF10I16R16QP3-nref1Trueintra30.0inter30.0TrueTrueRC0parallel0
+file_name = CIF
